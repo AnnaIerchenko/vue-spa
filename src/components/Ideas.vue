@@ -23,9 +23,17 @@ import HeroInformation from '@/components/HeroInformation.vue';
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 16px;
-    &-img {
+    @media screen and (max-width: 767px){
+      grid-template-columns: 1;
+      padding: 0;
       display: block;
-      min-height: 444px;
+    }
+    &-img {  
+      height: 100%;
+      object-fit: cover;
+      @media screen and (max-width: 767px){
+      display: none;
+      }
     }
   }
 </style>

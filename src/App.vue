@@ -35,6 +35,7 @@ img {
 .container {
     max-width: 1440px;
     margin: auto;
+    padding: 0 24px;
   }
 .input-text {
   height: 56px;

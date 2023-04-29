@@ -74,21 +74,41 @@
   .footer{
     background: #2a254b;
     color: #fff;
+    @media screen and (max-width: 767px){
+      margin: 0 -24px;
+    }
     &-content{
-      padding: 50px 82px 25px 82px;
-   
+      padding: 50px 82px 25px 82px; 
+      @media screen and (max-width: 1024px){
+        // padding: 50px 30px 30px 50px;
+      }
+      @media screen and (max-width: 767px){
+      padding: 40px 25px;
+      }
     }
     &-top{
       display: grid;
       grid-template-columns: 540px 1fr;
       column-gap: 110px;
       border-bottom: 1px solid #4e4d93;
-    
+    @media screen and (max-width: 1150px){
+      column-gap: 10px;
+      grid-template-columns: 450px 1fr;
+    }
+    @media screen and (max-width: 1024px){
+         grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (max-width: 767px){
+        display: block;
+      }
     }
     &-menu{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       margin-bottom: 22px;
+      @media screen and (max-width: 1024px){
+         grid-template-columns: repeat(2, 1fr);
+      }
       &__title{
         font-family: 'Clash Display', sans-serif; 
         display: block;

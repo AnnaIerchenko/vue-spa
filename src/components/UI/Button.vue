@@ -15,6 +15,10 @@
     color: {
       type: String,
       default: 'primary'
+    },
+    mobileFullWidth: {
+      type: Boolean,
+      default: false
     }
   })
 </script>
@@ -29,6 +33,7 @@
       'btn--primary': color === 'primary',
       'btn--secondary': color === 'secondary',
       'btn--lightgray': color === 'lightgray',
+      'btn--fullwidth' : mobileFullWidth
     }]">
     <slot />
   </button>
@@ -40,6 +45,7 @@
       'btn--primary': color === 'primary',
       'btn--secondary': color === 'secondary',
       'btn--lightgray': color === 'lightgray',
+      'btn--fullwidth' : mobileFullWidth
     }]"
     >
     <slot />
@@ -48,7 +54,6 @@
 
 <style lang="scss" scoped>
 .btn {
- 
   padding: 0 32px;
   display: flex;
   align-items: center;
@@ -58,6 +63,7 @@
   height: 56px;
   cursor: pointer;
   text-decoration: none;
+  white-space: nowrap;
   &:hover {
     opacity: 0.8;
   }
@@ -76,6 +82,12 @@
   &--white{
     background: #fff;
     color: #2a254b;
+  }
+  &--fullwidth{
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      padding: 32px;
+    }
   }
 }
 </style>

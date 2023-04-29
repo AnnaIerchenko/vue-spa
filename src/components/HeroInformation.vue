@@ -54,13 +54,16 @@ import uiButton from '@/components/UI/Button.vue';
         {{ description }}
         </span>
       </div>
+    
       <ui-button 
+        :mobileFullWidth="true"
         :color="colorLink || 'secondary'"
         type="link"
         to="/"
         >
         View collection
       </ui-button>
+      <img class="hero-info__image" src="../assets/img/hero.jpg" alt="hero"/>
       <!-- <a 
         :href="link" 
         class="hero-info-link"
@@ -80,6 +83,18 @@ import uiButton from '@/components/UI/Button.vue';
       flex-direction: column;
       justify-content: space-between; 
       align-items: flex-start;
+      @media screen and (max-width: 767px){
+        padding: 47px 24px 32px 24px;
+        min-height: 0;
+      }
+      &__image {
+        margin-top: 32px;
+      }
+      &-text {
+        @media screen and (max-width: 767px){
+          margin-bottom: 32px;
+        }
+      }
       &__title {
         font-family: 'Clash Display', sans-serif; 
         font-weight: 400;

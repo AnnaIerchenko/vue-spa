@@ -45,6 +45,7 @@
   </div>
   <div class="products-link">
     <ui-button 
+        :mobileFullWidth="true"
         color="lightgray"
         type="link"
         to="/"
@@ -60,12 +61,20 @@
 <style lang="scss" scoped>
   .products {
     padding: 0 80px;
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 40px;
     margin-bottom: 64px;
+    @media screen and (max-width: 1024px){
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
+    }
+    @media screen and (max-width: 1024px){
+      padding: 0;
+    }
     &-container {
       margin-bottom: 56px;
+      padding: 0 24px;
     }
     &-link{
       // display: block;

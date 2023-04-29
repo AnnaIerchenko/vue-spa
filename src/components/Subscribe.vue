@@ -39,6 +39,11 @@
     background-size: cover;
     padding: 97px 0 86px 0;
     min-height: 444px;
+    @media screen and (max-width: 767px){
+      padding: 74px;
+      margin: 0 -34px;
+      margin-bottom: 30px;
+    }
     &-content{
       max-width: 500px;
       margin: auto;
@@ -46,7 +51,9 @@
       // color: #fff;
       // background-color: #fff;
       padding: 40px;
-     
+      @media screen and (max-width: 767px){
+        text-align: left;
+      }
     }
     &-title {
       display: block;
@@ -59,17 +66,29 @@
       display: block;
       font-size: 18px;
       margin-bottom: 30px;
+      @media screen and (max-width: 767px){
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
     }
     &-checks{
       display: flex;
       justify-content: center;
       margin-bottom: 40px;
+      @media screen and (max-width: 767px){
+        display: block;
+  
+      }
     }
     &-check{
       display: flex;
       align-items: center;
       &:nth-child(2){
         margin: 0 36px;
+      }
+      @media screen and (max-width: 767px){
+        margin: 0;
+       
       }
       &__icon{
         margin-right: 5px;
@@ -78,6 +97,10 @@
   
     form {
       display: flex;
+      @media screen and (max-width: 767px){
+        display: block;
+        margin: 0 10px;
+      }
     }
   }
 </style>

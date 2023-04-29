@@ -34,6 +34,11 @@
   form{
     display: flex;
   }
+  @media screen and (max-width: 767px){
+    .input-text {
+      width: 80%;
+    }
+  }
   // .subscribe-form{
   //   display: flex;
   //   &__input{
